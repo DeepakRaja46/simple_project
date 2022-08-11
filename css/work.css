@@ -1,0 +1,361 @@
+/* Sticky element */
+
+.get-quotes {
+  position: fixed;
+
+  right: 0;
+  margin-top: 30vh;
+  z-index: 100;
+  animation: get-quote 2s ease infinite;
+}
+
+.get-quotes button {
+  position: absolute;
+  overflow: hidden;
+  transform-origin: top;
+  transform: rotate(270deg) !important;
+  right: 0;
+  height: 50px;
+  width: 100px;
+  background-color: #f38d39;
+  border: none;
+  border-radius: 5px;
+}
+
+@keyframes get-quote {
+  0% {
+    padding: 0px 40px;
+    height: 20%;
+  }
+  50% {
+    padding: 0px 0px;
+    height: 1360%;
+  }
+  100% {
+    padding: 0px 1000px;
+    height: 290%;
+  }
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  background-color: rgb(61, 241, 61);
+  border-radius: 50px;
+  z-index: 100;
+}
+
+.whatsapp i::before {
+  transform-origin: center;
+  transform: rotate(0deg);
+  transition: transform 300ms ease-in-out;
+}
+
+.whatsapp i:hover:before {
+  transform: rotate(360deg);
+}
+
+.whatsapp .whatsapp-icon i {
+  font-size: 30px;
+}
+
+/* navbar */
+
+.navbar .float-right .contact {
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/home/Button.png);
+  border-radius: 20px;
+}
+
+header {
+  position: relative;
+  display: block;
+}
+
+.navbar {
+  font-family: "Chelsea Market", cursive;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: #ede9eb;
+
+  z-index: 100;
+}
+.navbar .float-right button {
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* hover */
+
+.navbar .float-right .contact:hover {
+  outline: none;
+  border: none;
+  color: #111;
+}
+.navbar .float-right .contact:visited {
+  outline: none;
+  border: none;
+  color: #111;
+}
+
+.navbar .nav-item:hover {
+  border-bottom: 5px solid red !important;
+}
+
+/* animation */
+
+.float-right .phone-icon:hover span img {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* Work banner */
+
+.work-banner {
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/work/work_banner.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.color {
+  color: #f38d39;
+}
+
+.work-banner .content h4 {
+  line-break: auto;
+  line-height: 1.3;
+  font-size: 28px;
+}
+
+/* Work menu */
+
+.work-menu .container-fluid {
+  overflow: hidden;
+}
+
+
+.menu-list li {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu-list .active {
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/home/Button.png);
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+
+/* !contents */
+
+.work-content img {
+  position: relative;
+}
+.studio-left {
+  display: block;
+  position: relative;
+}
+.work-content .studio .img-content {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.work-content .studio .img-content h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.work-content .studio .img-content .two {
+  margin-left: 40px;
+  color: white;
+  -webkit-text-stroke: black 1px;
+}
+
+.studio .c0l-lg-7 {
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+.right-content {
+  margin-top: 90px;
+}
+
+.right-content .content-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  bottom: 0;
+}
+
+.right-content .content-box .tables p {
+  font-size: 18px;
+}
+.right-content .content-box .tables {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.right-content .content-box .tables h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.right-content .content-box .one,
+.right-content .content-box .three {
+  background-color: #e4eaf5;
+}
+
+.right-content .content-box .two {
+  background-color: #6d7a83;
+  color: #fff;
+}
+
+.mouse {
+  width: 40px;
+  height: 60px;
+  border: 2px black solid;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mouse .one,
+.mouse .two {
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  background-color: #111;
+}
+
+.work-content .cabiinet .img-content {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: -100px;
+}
+
+.work-content .cabiinet .img-content h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.work-content .cabiinet .img-content .two {
+  margin-left: -40px;
+  color: white;
+  -webkit-text-stroke: black 1px;
+}
+
+.vortex .img-content h1 {
+  color: #111 !important;
+}
+
+
+
+/* Mobile app */
+
+
+
+
+
+
+
+.work-content .display{
+  display: none;
+}
+
+/* footer */
+
+footer {
+  font-family: "Chelsea Market", cursive;
+}
+
+footer .social-media {
+  background-color: #111;
+  text-align: center;
+}
+
+.get-in-touch .address {
+  display: flex;
+  align-items: flex-start;
+}
+
+.get-in-touch .address img,
+.get-in-touch .phone img {
+  margin-right: 1rem;
+}
+
+.get-in-touch .email i {
+  color: #f79c52;
+}
+
+.footer-bottom h5 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.get-in-touch button {
+  background-color: #f38d39;
+
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 8px 25px;
+}
+
+.footer-bottom .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-bottom .logo img {
+  width: 150px;
+  height: 150px;
+}
+
+/*   font-family: "Chelsea Market", cursive; */ ;

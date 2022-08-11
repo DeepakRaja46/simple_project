@@ -1,0 +1,478 @@
+.get-quotes {
+  position: fixed;
+
+  right: 0;
+  margin-top: 30vh;
+  z-index: 100;
+}
+
+.container-fluid .row{
+  margin-right: 0px;
+}
+
+.get-quotes button {
+  position: absolute;
+  overflow: hidden;
+  transform-origin: top;
+  transform: rotate(270deg) !important;
+  right: 0;
+  height: 50px;
+  width: 100px;
+  background-color: #f38d39;
+  border: none;
+  border-radius: 5px;
+  animation: get-quote 2s ease infinite;
+}
+
+@keyframes get-quote {
+  0% {
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+
+  50% {
+    padding-top: 20px;
+
+    padding-bottom: 30px;
+  }
+
+  100% {
+    padding-top: 20px;
+
+    padding-bottom: 40px;
+  }
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  background-color: rgb(60, 223, 60);
+  border-radius: 50px;
+  z-index: 100;
+}
+
+.whatsapp i::before {
+  transform-origin: center;
+  transform: rotate(0deg);
+  transition: transform 300ms ease-in-out;
+}
+
+.whatsapp i:hover:before{
+  transform: rotate(360deg);
+}
+
+.whatsapp .whatsapp-icon i {
+  font-size: 30px;
+}
+
+/* navbar */
+
+.navbar .float-right .contact {
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/home/Button.png);
+  border-radius: 20px;
+}
+
+header .navbar {
+  font-family: "Chelsea Market", cursive;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+
+  background-color: #ede9eb;
+
+  z-index: 100;
+}
+.navbar .float-right button {
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.navbar-collapse {
+  justify-content: space-between;
+}
+
+/* hover */
+
+.navbar .float-right .contact:hover {
+  outline: none;
+  border: none;
+  color: #111;
+}
+.navbar .float-right .contact:visited {
+  outline: none;
+  border: none;
+  color: #111;
+}
+
+.navbar .nav-item:hover {
+  border-bottom: 5px solid red !important;
+}
+
+/* animation */
+
+.float-right .phone-icon:hover span img {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* Service-title */
+
+.service-title {
+  font-family: "Roboto", sans-serif;
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/services/service_bg.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.service-title .title h1 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+.service-title .title .para {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.service-title .title .text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Website section */
+
+.website .card img {
+  position: relative;
+  margin: auto;
+  padding: 3rem 3rem 0 3rem;
+}
+
+.website .card {
+  z-index: 0;
+}
+
+.website .card .card-title {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.website .left-side .card {
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  border: none;
+}
+
+.website .card .card-text {
+  font-family: cursive;
+  font-size: 16px;
+  color: #111;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: center !important;
+}
+
+.website .card .buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.website .card .buttons a {
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/home/Button.png);
+  z-index: 1;
+  font-family: cursive;
+  position: relative;
+  border: 1px solid black;
+
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  transition: transform ease-in-out 2s;
+}
+
+.website .card .buttons a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: transform 300ms ease-in-out;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.website .card .buttons a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.website .card .buttons a i {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  transform: shake 3s ease-in-out;
+}
+
+.website .right-side .card {
+  border: none;
+  border-radius: 20px;
+  background: #f6f6f6;
+  box-shadow: -27px 15px 40px rgb(0 0 0 / 25%);
+  transition: 0.5s;
+}
+
+.website .right-side .card:hover {
+  box-shadow: -7px 10px 20px rgb(0 0 0 / 25%);
+}
+
+.website .right-side .buttons {
+  padding-top: 120px;
+}
+
+/* Graphic Design */
+
+.graphic-design .row {
+  background-color: #d9d9d9;
+  border-radius: 40px;
+  z-index: 1;
+}
+
+.graphic-design .title {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.graphic-design .text {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: cursive;
+}
+
+.graphic-design .buttons {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.graphic-design .gd-ri8 {
+  z-index: 0;
+}
+
+.graphic-design .buttons a {
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/home/Button.png);
+  z-index: 10;
+  font-family: cursive;
+  border: 1px solid black;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.graphic-design .buttons a::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  background-color: white;
+  z-index: -1;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.graphic-design .buttons a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.graphic-design .buttons a i {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+/* SEO */
+
+.website .SEO .card {
+  border: none;
+  border-radius: 20px;
+  background: #f6f6f6;
+  box-shadow: -27px 15px 40px rgb(0 0 0 / 25%);
+  transition: 0.5s;
+}
+
+.website .SEO .card:hover {
+  box-shadow: -7px 10px 20px rgb(0 0 0 / 25%);
+}
+.website .SEO .buttons {
+  padding-top: 30px;
+}
+
+.website .MAD .card {
+  border: none;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+}
+
+/* Quotes */
+
+.quote {
+  background-color: red;
+  color: white;
+  z-index: 0;
+}
+
+.quote h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.quote h5 {
+  font-size: 22px;
+  word-spacing: 2px;
+  font-weight: 500;
+}
+.quote a {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  border: black 1px solid;
+  font-size: 20px;
+  font-weight: 500;
+  z-index: 1;
+}
+.quote a::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #f38d39;
+  border-radius: 50px;
+  transform-origin: center;
+  transition: transform 500ms ease-in-out;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.quote a:hover::before {
+  transform: scale(1);
+  transform-origin: center;
+}
+
+.quote a:hover {
+  background: #f38d39;
+}
+
+/* footer */
+
+footer {
+  font-family: "Chelsea Market", cursive;
+  z-index: 0;
+}
+
+footer .social-media {
+  background-color: #111;
+  text-align: center;
+}
+
+.get-in-touch .address {
+  display: flex;
+  align-items: flex-start;
+}
+
+.get-in-touch .address img,
+.get-in-touch .phone img {
+  margin-right: 1rem;
+}
+
+.get-in-touch .email i {
+  color: #f79c52;
+}
+
+.footer-bottom h5 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.get-in-touch button {
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/home/Button.png);
+  position: relative;
+  z-index: 1;
+
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 8px 25px;
+}
+
+.get-in-touch button::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: 20px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms ease-in;
+  z-index: -1;
+}
+
+.get-in-touch button:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.footer-bottom .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-bottom .logo img {
+  width: 150px;
+  height: 150px;
+}

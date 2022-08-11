@@ -1,0 +1,810 @@
+/* Sticky element */
+
+.get-quotes {
+  position: fixed;
+
+  right: 0;
+  margin-top: 30vh;
+  z-index: 100;
+  animation: get-quote 2s ease infinite;
+}
+
+.get-quotes button {
+  position: absolute;
+  overflow: hidden;
+  transform-origin: top;
+  transform: rotate(270deg) !important;
+  right: 0;
+  height: 50px;
+  width: 100px;
+  background-color: #f38d39;
+  border: none;
+  border-radius: 5px;
+}
+
+@keyframes get-quote {
+  0% {
+    padding: 0px 40px;
+    height: 20%;
+  }
+  50% {
+    padding: 0px 0px;
+    height: 1360%;
+  }
+  100% {
+    padding: 0px 1000px;
+    height: 290%;
+  }
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  background-color: rgb(61, 241, 61);
+  border-radius: 50px;
+  z-index: 100;
+}
+
+.whatsapp i::before {
+  transform-origin: center;
+  transform: rotate(0deg);
+  transition: transform 300ms ease-in-out;
+}
+
+.whatsapp i:hover:before {
+  transform: rotate(360deg);
+}
+
+.whatsapp .whatsapp-icon i {
+  font-size: 30px;
+}
+
+/* navbar */
+
+.navbar .float-right .contact {
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/home/Button.png);
+  border-radius: 20px;
+}
+
+.navbar {
+  font-family: "Chelsea Market", cursive;
+  position: sticky;
+  top: 0;
+
+  background-color: #ede9eb;
+
+  z-index: 100;
+}
+.navbar .float-right button {
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.navbar-collapse {
+  justify-content: space-between;
+}
+
+/* hover */
+
+.navbar .float-right .contact:hover {
+  outline: none;
+  border: none;
+  color: #111;
+}
+.navbar .float-right .contact:visited {
+  outline: none;
+  border: none;
+  color: #111;
+}
+
+.navbar .nav-item:hover {
+  border-bottom: 5px solid red !important;
+}
+
+/* animation */
+
+.float-right .phone-icon:hover span img {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* End navbar */
+
+/* !Slider section */
+
+#myslide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#mySlide .carousel-item {
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/home/Background.png);
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#mySlide .inner-content {
+  display: flex;
+}
+
+#mySlide .inner-content .pencile {
+  display: flex;
+
+  align-items: center;
+}
+
+#mySlide .inner-content h1 {
+  font-size: 70px;
+
+  font-weight: 700;
+  font-family: "Chelsea Market", cursive;
+}
+
+.inner-content .diff-font {
+  color: #ff9992;
+}
+
+#mySlide .buttons a {
+  border: 1.4px solid black;
+  background-color: transparent;
+  border-radius: 20px;
+  color: #111;
+  font-family: "Chelsea Market", cursive;
+
+  font-weight: 600;
+}
+
+#mySlide .buttons .view {
+  border: none;
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/home/Button.png);
+  border-radius: 20px;
+  margin-left: 2rem;
+}
+
+/* img box1 */
+
+.img-box {
+  display: block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.img-box div :not(.main-img) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-box .rotate-img img {
+  transform-origin: center;
+  animation: rotate 2s ease-in-out forwards infinite;
+}
+
+.img-box .main-img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-box .e-commerce-app {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  place-content: center;
+  top: -60px;
+  left: 10px;
+}
+
+.img-box .food-app {
+  position: relative;
+  left: 250px;
+}
+
+.img-box .matrimonial-app {
+  position: relative;
+  top: -200px;
+  left: -150px;
+}
+
+.img-box .job-portal-app {
+  position: relative;
+  top: -140px;
+  left: -200px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateY(2px) translateX(-2px);
+  }
+
+  60% {
+    transform: translateY(0px) translateX(-2px);
+  }
+
+  100% {
+    transform: translateY(-2px) translateX(1px);
+  }
+}
+
+/* slide2  */
+.rotate-img .graph {
+  position: relative;
+  top: -10px;
+  left: 10px;
+}
+
+.rotate-img .idea {
+  position: relative;
+  top: -40px;
+  left: 170px;
+}
+
+.rotate-img .market {
+  position: relative;
+  top: -10px;
+  left: -110px;
+}
+
+.rotate-img .pie-chart {
+  position: relative;
+  top: 20px;
+  left: 190px;
+}
+
+.rotate-img .play-btn {
+  position: relative;
+  top: 100px;
+  left: -210px;
+}
+
+.rotate-img .quote {
+  position: relative;
+  top: 20px;
+  left: 220px;
+}
+
+.rotate-img .search {
+  position: relative;
+  top: -200px;
+  left: -210px;
+}
+
+.rotate-img .share {
+  position: relative;
+  top: -150px;
+  left: -160px;
+}
+
+.rotate-img .www {
+  position: relative;
+  top: -250px;
+  left: 110px;
+  transform: rotate(45deg);
+}
+
+/* Slide3 */
+
+.slide3 h1 {
+  font-size: 50px !important;
+  font-weight: 600 !important;
+}
+
+.slide3 .pencile {
+  position: relative !important;
+  bottom: 50px !important;
+  align-items: flex-end !important;
+}
+
+.slide3 .rotate-img .matrimonial-app {
+  left: -200px;
+  top: -200px;
+}
+
+/* Who we are */
+
+.who-we-are {
+  font-family: "Chelsea Market", cursive;
+}
+
+.who-we-are img {
+  vertical-align: middle;
+}
+
+.who-we-are .left-img img {
+  justify-content: center;
+  animation: floating 10s ease infinite;
+  transform-origin: center;
+  align-items: center;
+}
+
+@keyframes floating {
+  10%,
+  90% {
+    transform: translateY(-40px);
+  }
+
+  20%,
+  80% {
+    transform: translateY(-90px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translateY(-40px);
+  }
+
+  40%,
+  60% {
+    transform: translateY(-90px);
+  }
+}
+
+/* Right-img */
+.right-img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.right-img .video-img {
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+  object-fit: cover;
+  object-position: center center;
+  height: auto;
+  vertical-align: middle;
+}
+
+.video-img .video {
+  position: relative;
+  object-fit: cover;
+  object-position: center center;
+  height: auto;
+  vertical-align: middle;
+  text-align: center;
+  align-items: center;
+  z-index: -2;
+  display: flex;
+}
+
+.video-img .video-icon {
+  position: relative;
+  max-width: 100%;
+  transform: translate(0px, -190px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.video-icon .wave {
+  position: absolute;
+  display: block;
+  transform-origin: center;
+  background-color: #111;
+  width: 80px;
+  height: 80px;
+  z-index: -1;
+  animation: wave ease 3s infinite;
+  border-radius: 50px;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  /* 50% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+
+  75% {
+    transform: scale(1.1);
+    opacity: 0.1;
+  } */
+
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
+
+.arrow img {
+  position: relative;
+}
+
+.who-we-are .arrow2 img {
+  display: block;
+  
+  margin: 0 auto;
+  transform: translateX(50%);
+}
+
+.scroll-down {
+  color: #ff9992;
+
+  display: block;
+  position: absolute;
+  left: 0;
+  padding-left: 40px;
+  font-size: 18px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Why work with us */
+
+.why-work-with-us {
+  font-family: "Chelsea Market", cursive;
+
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/home/work_with/bg.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide1-bottom {
+  text-align: justify;
+}
+.slide1-bottom h1 {
+  font-size: 42px;
+}
+
+.slide1-bottom p {
+  font-size: 16px;
+  padding: 10px 30px;
+  font-weight: 400;
+}
+
+.slide1-bottom .color-change {
+  color: rgb(231, 65, 65);
+}
+
+/* slide2 */
+
+.slide2-left h3 {
+  max-width: 100%;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slide2-left img {
+  max-width: 100%;
+  padding-left: 20px;
+}
+
+/* slide3 */
+
+.slide-3 .left-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.slide-3 .color-change {
+  color: rgb(231, 65, 65);
+}
+
+.right-side .logo {
+  display: flex;
+  justify-content: end;
+}
+
+.right-side .logo img {
+  width: 80px;
+  height: 80px;
+}
+
+/* corousel indicators */
+
+.carousel-indicators .li1,
+.carousel-indicators .li2,
+.carousel-indicators .li3 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50% !important;
+  margin: auto 6px;
+  opacity: 1;
+}
+
+.carousel-indicators .li1 {
+  background-color: orangered;
+  border-radius: 50px;
+}
+
+.carousel-indicators .li2 {
+  background-color: rgb(255, 123, 0);
+}
+
+.carousel-indicators .li3 {
+  background-color: rgb(0, 47, 255);
+}
+
+.carousel-indicators .active {
+  transform: scale(1.1);
+}
+
+.carousel-btn i {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+/* principles */
+
+.principles {
+  font-family: "Chelsea Market", cursive;
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/home/our_priciple/bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Our section */
+
+.our-process {
+  font-family: "Chelsea Market", cursive;
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/home/our_process/bg.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card1 img {
+  height: 100px;
+  width: 100px;
+}
+
+.our-process .card img {
+  align-items: center;
+}
+
+.our-process .card .card-title {
+  font-size: 30px;
+  font-weight: 500;
+}
+.our-process .card .card-text {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.our-process .process-left h2 {
+  font-family: poppins, sans-serif;
+}
+
+.our-process .process-left h2 {
+  position: relative;
+
+  transform: rotate(-90deg);
+}
+
+.our-process .process-left h2 {
+  font-size: 40px;
+
+  word-wrap: normal;
+}
+
+.our-process .explore-here a {
+  outline: none;
+  direction: none;
+}
+
+.our-process .explore-here hr {
+  height: 2px;
+
+  text-align: center;
+}
+
+.our-process .row .card img {
+  transform-origin: center;
+  animation: zoom-out ease 2s;
+}
+
+.our-process .row .process-ri8 img {
+  transform-origin: center;
+  animation: zoom-out ease 2s;
+}
+
+@keyframes zoom-out {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Client */
+
+.client {
+  font-family: "Chelsea Market", cursive;
+}
+
+.client .container {
+  border: 1px black;
+  border-style: dashed;
+  border-radius: 7px;
+}
+
+/* what we doo */
+
+.what-we-do {
+  background-image: url(http://simplemindz.in/demo_websites/STS/assets/images/home/what_we_do/bg.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.what-we-do .col-lg-9 .content {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px;
+}
+.what-we-do .col-lg-9 .content img {
+  padding: 0px 10px;
+}
+
+.what-we-do .title {
+  height: 100%;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+
+.what-we-do h1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  top: 50;
+  font-size: 40px;
+}
+
+.what-we-do h1 span {
+  padding: 0px 10px;
+  color: #ede9eb;
+}
+
+.what-we-do .red-bg {
+  background-color: red;
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+/* Testimonial */
+
+.testimonial {
+  font-family: "Chelsea Market", cursive;
+}
+
+.testimonial .card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.testimonial img {
+  width: 24%;
+}
+
+.testimonial .blockquote-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial .blockquote-footer span img {
+  width: 35%;
+  padding: 0;
+}
+
+/* footer */
+
+footer {
+  font-family: "Chelsea Market", cursive;
+}
+
+footer .social-media {
+  background-color: #111;
+  text-align: center;
+}
+
+.get-in-touch .address {
+  display: flex;
+  align-items: flex-start;
+}
+
+.get-in-touch .address img,
+.get-in-touch .phone img {
+  margin-right: 1rem;
+}
+
+.get-in-touch .email i {
+  color: #f79c52;
+}
+
+.footer-bottom h5 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.get-in-touch button {
+  background-color: #f38d39;
+
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 8px 25px;
+}
+
+.footer-bottom .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-bottom .logo img {
+  width: 150px;
+  height: 150px;
+}
+
+/*   font-family: "Chelsea Market", cursive; */ ;
